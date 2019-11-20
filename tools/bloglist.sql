@@ -24,7 +24,7 @@ CREATE TABLE `bloglist` (
   `id` bigint(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) DEFAULT NULL,
   `category` varchar(200) DEFAULT NULL,
-  `date` date DEFAULT NULL,
+  `date` DATETIME DEFAULT NULL,
   `content` varchar(20000) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
