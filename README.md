@@ -7,4 +7,3 @@ cd 到 back-end
 执行 npm i 等待包下载完成后执行 npm run initdb   
 然后执行npm run dev 启动后端服务   
 后端默认端口在config里面有配置
-

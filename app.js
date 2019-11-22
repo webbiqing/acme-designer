@@ -18,6 +18,7 @@ app.use(bodyparser({
 app.use(json())
 app.use(logger())
 app.use(response)
+/*处理跨域的中间件*/
 app.use(cors());
 
 // 路由
