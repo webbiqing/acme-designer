@@ -6,6 +6,7 @@ CREATE TABLE `bloglist` (
   `category` varchar(200) DEFAULT NULL,
   `date` datetime DEFAULT NULL,
   `content` varchar(1000) DEFAULT NULL,
+  `voters` int(11) DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 
