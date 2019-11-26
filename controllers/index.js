@@ -2,12 +2,6 @@ const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
 
-
-/* 
-
-2019-11-18T04:43:55.161422Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: ffgh*fi1NAM0
-
-*/
 /**
  * 映射 d 文件夹下的文件为模块
  */

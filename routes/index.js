@@ -13,4 +13,7 @@ router.get('/search-blog',controllers.searchBlog)
 router.get('/search-category',controllers.category)
 router.post('/voters',controllers.setVoters)
 
+router.post('/add-comment',controllers.addComment)
+
+
 module.exports = router
