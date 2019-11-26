@@ -14,7 +14,7 @@
     "debug": "^2.6.3",
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.13.0",
+    "knex": "^0.20.2",
     "koa": "^2.2.0",
     "koa-bodyparser": "^3.2.0",
     "koa-convert": "^1.2.0",
