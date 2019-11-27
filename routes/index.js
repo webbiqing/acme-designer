@@ -1,5 +1,5 @@
 /**
- * ajax 服务路由集合
+ *服务路由集合
  */
 const router = require('koa-router')({
     prefix: '/acme/api'

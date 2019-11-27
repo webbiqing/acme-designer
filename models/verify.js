@@ -1,7 +1,7 @@
 const sqlClient = require("../tools/index")
 const escape = require('../tools/escape')
 
-const varifys = {
+const verifys = {
     async setToken(username,token){
         return await sqlClient.query(
             escape`INSERT INTO acme_user_token (username,token,create_time) VALUES (${username},${token},NOW())`
@@ -14,4 +14,4 @@ const varifys = {
     },
 }
 
-module.exports = varifys;
+module.exports = verifys;
