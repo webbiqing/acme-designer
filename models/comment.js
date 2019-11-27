@@ -8,6 +8,9 @@ const comment  = {
                    VALUES 
                    (${blog_id},${content},${create_user},NOW())`
         )
+    },
+    async searchComment(blog_id) {
+        return await sqlClient.query(`SELECT * FROM comment where blog_id = ${blog_id}`)
     }
 }
 
