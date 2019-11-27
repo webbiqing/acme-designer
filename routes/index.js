@@ -7,6 +7,7 @@ const router = require('koa-router')({
 const controllers = require('../controllers')
 
 router.get('/login',controllers.login)
+router.post('/register',controllers.register)
 
 router.post('/add-blog',controllers.addBlog)
 router.get('/search-blog',controllers.searchBlog)
