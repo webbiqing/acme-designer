@@ -11,9 +11,9 @@ const blogs  = {
     },
     async searchBlogs(categoryId){
         return await sqlClient.query(`
-            SELECT bl.*,com.count from bloglist bl,
-            (SELECT count(*) count,blog_id FROM \`comment\` GROUP BY blog_id) com
-            WHERE bl.category = ${categoryId} and bl.id = com.blog_id order by bl.date DESC
+            select bl.*,com.count from bloglist bl
+            LEFT JOIN (SELECT count(*) count,blog_id FROM \`comment\` GROUP BY blog_id) com on bl.id = com.blog_id
+            WHERE bl.category = ${categoryId} order by bl.date DESC
         `)
     },
     async setVoters(id){

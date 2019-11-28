@@ -24,9 +24,9 @@ module.exports = async (ctx, next)=> {
 
     } catch (error) {
         ctx.body = {
-            code:401,
-            data:{},
-            message:'认证失败！'
+            code:400,
+            data:{error},
+            message:'服务异常'
         }
     }
 }
