@@ -9,8 +9,16 @@ const comment  = {
                    (${blog_id},${content},${create_user},NOW())`
         )
     },
-    async searchComment(blog_id) {
-        return await sqlClient.query(`SELECT * FROM comment where blog_id = ${blog_id}`)
+    async searchComment(blog_id, page_index, page_size) {
+        const Result = await sqlClient.query(`SELECT * FROM comment where blog_id = ${blog_id} LIMIT ${page_index},${page_size};`);
+        const TotalCount = await sqlClient.query(`SELECT COUNT(*) FROM comment WHERE blog_id=${blog_id};`)
+        return {
+            Result,
+            TotalCount: TotalCount[0]["COUNT(*)"]
+        }
+    },
+    async parseComment(commentId) {
+        return await sqlClient.query(`UPDATE comment SET prase_count = prase_count + 1 where id = ${commentId}`);
     }
 }
 

@@ -16,6 +16,7 @@ router.post('/voters',controllers.setVoters)
 
 router.post('/add-comment',controllers.addComment)
 router.get('/search-comment',controllers.searchComment)
+router.post('/parse-comment',controllers.parseComment)
 
 
 module.exports = router
